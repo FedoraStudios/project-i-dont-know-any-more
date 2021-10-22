@@ -1,9 +1,13 @@
 noseX=0;
 noseY=0;
 
+//onClickTakeSnapshot and onClickChangeImage are Supposedly not defined, and PoseNet dosent initalize
+
 function preload()
 {
-  
+    currentImage  = loadImage('https://i.postimg.cc/3x3QzSGq/m.png');
+
+    otherImage = loadImage('https://i.postimg.cc/PxFvYgkv/l1.png')
 }
 
 function setup()
@@ -45,4 +49,18 @@ function draw()
 function onClickTakeSnapshot()
 {
     save('myFilterImage.png');
+}
+
+
+function onClickChangeImage()
+{
+    if (currentImage = 'https://i.postimg.cc/3x3QzSGq/m.png')
+    {
+        currentImage = 'https://i.postimg.cc/PxFvYgkv/l1.png'  
+        console.log("Image Changed")      
+    } else
+    {
+        currentImage = 'https://i.postimg.cc/3x3QzSGq/m.png'
+        console.log("Image Changed") 
+    }
 }
